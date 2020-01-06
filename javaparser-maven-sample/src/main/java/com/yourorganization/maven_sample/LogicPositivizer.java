@@ -16,6 +16,7 @@ import java.nio.file.Paths;
  * Some code that uses JavaParser.
  */
 public class LogicPositivizer 
+
 {
     public static void main(String[] args) throws IOException {
         // SourceRoot is a tool that read and writes Java files from packages on a certain root directory.
