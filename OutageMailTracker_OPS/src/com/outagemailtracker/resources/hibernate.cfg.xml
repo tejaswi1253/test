@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC 
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- hibernate dialect -->
+		
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://zneudl1p12pgsql01.postgres.database.azure.com:5432/streampreprod?ssl=false</property>	
+		<property name="hibernate.connection.username">tibcopreprod@zneudl1p12pgsql01.postgres.database.azure.com</property>
+		<property name="hibernate.connection.password">jfdYi4VChghYi8TvFgoU69Pb</property>
+		
+		<property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+
+		<!-- Automatic schema creation (begin) === -->
+		<property name="hibernate.hbm2ddl.auto">none</property>
+
+		<!-- Simple memory-only cache -->
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<property name="show_sql">true</property>	
+		<mapping class="com.outagemailtracker.entity.IncidentEntity" />
+		<mapping class="com.outagemailtracker.entity.ResolutionEntity" />
+		<mapping class="com.outagemailtracker.entity.MatchEntity" />
+		<mapping class="com.outagemailtracker.entity.RegionEntity" />
+		<mapping class="com.outagemailtracker.entity.VendorEntity" />
+	</session-factory>
+</hibernate-configuration>
